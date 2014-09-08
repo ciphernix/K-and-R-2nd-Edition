@@ -24,7 +24,8 @@ int main (void)
 			case TAB:
 				++tab_count;
 				break;
-			case default:
+			default:
+					;
 				break;	
 		}
 	}
