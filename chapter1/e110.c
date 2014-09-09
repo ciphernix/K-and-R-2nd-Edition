@@ -31,7 +31,7 @@ int main (void)
 				putchar('\\');
 				break;
 			default:
-				putchar(c)
+				putchar(c);
 				break;
 			}
 		}
