@@ -7,8 +7,7 @@
 #include <stdio.h>
 
 #define BACKSPACE '\b'
-#define BLANK ' '
-#define BACKSLASH '\n'
+#define BACKSLASH '\\'
 #define TAB '\t'
 
 int main (void)
@@ -19,12 +18,22 @@ int main (void)
 	{
 		switch (c)
 		{
-			case BLANK:
+			case BACKSPACE:
 				putchar('\\');
 				putchar('b');
 				break;
 			case TAB:
 				putchar('\\');
-				putchar('\t');
+				putchar('t');
 				break;
-			case 
+			case BACKSLASH:
+				putchar('\\');
+				putchar('\\');
+				break;
+			default:
+				putchar(c)
+				break;
+			}
+		}
+		return 0;
+}
