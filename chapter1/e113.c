@@ -8,7 +8,7 @@
 
 #define IN  1		/* inside a word */
 #define OUT 0		/*	outside a word */
-#define MAX 64		/* max word length */
+#define MAX 16		/* max word length */
 
 int main(void)
 {
