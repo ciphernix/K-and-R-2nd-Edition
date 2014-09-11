@@ -14,8 +14,9 @@ int main(void)
 {
 	int word_length[MAX];
 	int c, state = OUT, length = 0;
+	int i, j;
 	
-	for (int i = 0; i < MAX ; i++ )
+	for (i = 0; i < MAX ; i++ )
 		word_length[i] = 0;
 	
 	while ((c = getchar()) != EOF )
@@ -30,17 +31,17 @@ int main(void)
 			if (state == IN )
 			{
 				length %= MAX;	/*make sure length is < MAX */
-				++world_length[length];
+				++word_length[length];
 				length = 0;
 			}
 			state = OUT;
 		}
 	}
 	
-	for ( int i = 1; i < MAX; i++ )
+	for ( i = 1; i < MAX; i++ )
 	{
 		printf("%2i   ", i);
-		for (int j = word_length[i]; j > 0; --j )
+		for ( j = word_length[i]; j > 0; --j )
 			putchar('*');
 		putchar('\n');
 	}
