@@ -15,7 +15,7 @@
 int main(void)
 {
 	int word_length[MAX];
-	int c, state = OUT, cursor = 0; length = 0;
+	int c, state = OUT, cursor = 0, length = 0;
 	int i, j;
 	
 	for (i = 0; i < MAX ; i++ )
@@ -56,7 +56,7 @@ int main(void)
 	}
 	putchar('\n');
 	for (i = 1; i < MAX; i++)
-		printf("%2i ");
+		printf("%2i ",i);
 	putchar('\n');
 	
 	return 0;
