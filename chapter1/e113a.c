@@ -48,6 +48,8 @@ int main(void)
 		{
 			if ( word_length[i] >= cursor )
 				printf(" * ");
+			else  
+				printf("   ");
 		}
 		putchar('\n');
 		--cursor;
