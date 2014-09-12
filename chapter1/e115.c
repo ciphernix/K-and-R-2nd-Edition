@@ -23,7 +23,7 @@ void fahr_celsius(int lower, int upper, int step)
 	
 	for (fahr = lower; fahr <= upper; fahr += step)
 	{
-		printf("%3.0f\t\t%6.1f\n", fahr, fahr_to_celsius(fahr);
+		printf("%3.0f\t\t%6.1f\n", fahr, fahr_to_celsius(fahr));
 	}
 	
 }
