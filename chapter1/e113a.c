@@ -56,7 +56,7 @@ int main(void)
 	}
 	putchar('\n');
 	for (i = 1; i < MAX; i++)
-		printf("%2i ",i);
+		printf(" %2i",i);
 	putchar('\n');
 	
 	return 0;

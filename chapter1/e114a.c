@@ -15,7 +15,10 @@
 int main (void)
 {
 	int c, i, j, cursor = 0;
-	int letters[MAX] = 0;
+	int letters[MAX];
+
+	for ( i = 0; i < MAX; i++ )
+		letters[i] = 0;
 	
 	while ((c = getchar()) != EOF )
 	{
@@ -35,12 +38,16 @@ int main (void)
 	
 		while (cursor > 0 )
 	{
-		for ( i = 1; i < MAX; i++ )
+		for ( i = 0; i < MAX; i++ )
 		{
 			if ( letters[i] >= cursor )
-				printf("* ");
+			{
+				printf(" *");	
+			}
 			else  
+			{
 				printf("  ");
+			}
 		}
 		putchar('\n');
 		--cursor;
@@ -49,7 +56,7 @@ int main (void)
 
 	for (i = 0 ; i < MAX ; ++i )
 	{
-		printf("%c ",i + 'A');
+		printf(" %c", i + 'A');	
 	}
 	putchar('\n');
 	return 0;

@@ -13,7 +13,10 @@
 int main (void)
 {
 	int c, i, j;
-	int letters[MAX] = 0;
+	int letters[MAX] ;
+
+	for (i = 0; i < MAX ; i++ )
+		letters[i] = 0;
 	
 	while ((c = getchar()) != EOF )
 	{
