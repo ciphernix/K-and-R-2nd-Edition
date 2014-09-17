@@ -16,13 +16,23 @@ void copy(char to[], char from[]);
 int main(void)
 {
 	int len;            /* current line length */
+	int i;
 	int max;            /* maximum length seen so far */
 	char line[MAXLINE];    /* current input line */
 	char longest[MAXLINE]; /* longest line saved here */
+	char c; 
 	
+
 	max = 0;
 	while ((len = getline(line, MAXLINE)) > 0)
 	{
+		if (len == MAXLINE-1 && line[len-1] != '\n')  //line overflows
+		{
+			for (i = 0; (c=getchar())!=EOF && c!='\n'; i++)
+				;
+			len += i;
+		}
+
 		if (len > max)
 		{
 			max = len;
@@ -30,7 +40,7 @@ int main(void)
 		}
 	}
 	if (max > 0)  /* there was a line */
-		printf("%s", longest);
+		printf("%i %s", max, longest);
 	return 0;
 }
 
