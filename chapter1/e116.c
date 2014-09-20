@@ -57,7 +57,7 @@ int getline(char s[],int lim)
 		++i;
 	}
 	s[i] = '\0';
-	return i;
+	return i;
 }
 
 /* copy:  copy 'from' into 'to'; assume to is big enough */
