@@ -19,7 +19,6 @@ int main (void)
 		{
 			buffer[i] = c;
 			++i;
-			non_blank = 0;
 		}
 		else if ( c != '\n' )
 		{
