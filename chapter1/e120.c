@@ -7,20 +7,31 @@
 
 #include <stdio.h>
 
-#define TABSPACE 8 //number of spaces
+#define TABSTOP 7 //number of spaces
 
 int main (void)
 {
 	int c;
-	int i;
+	int i = 0;
 	
 	while (( c=getchar() ) != EOF )
 	{
-		if (c == '\t')
-			for (i = 0; i < TABSPACE; i++)
-				putchar(' ');
-		else
+		if (c == '\n')
+		{
 			putchar(c);
+			i = 0;
+		}
+		if (c == '\t')
+			while ((TABSTOP - i ) % TABSTOP != 0)
+			{
+				putchar(' ');
+				++i;
+			}
+		else
+		{
+			putchar(c);
+			++i;
+		}
 	}
 	
 	return 0;
