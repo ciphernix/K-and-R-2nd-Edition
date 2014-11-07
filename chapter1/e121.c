@@ -18,14 +18,14 @@ int main(void)
 		if (c == ' ' )
 		{
 			if (pos % TABSTOP == 0 )
-				putchar('/t');
+				putchar('\t');
 			else 
 				putchar(c);
 
 			pos++;
 		}
 		
-		else if ( c == '/n') 
+		else if ( c == '\n') 
 		{
 			pos = 0;
 			putchar(c);	
