@@ -43,6 +43,7 @@ int main(void)
 	}
 	if (max > 0) /* there was a line */
 		printf("%i %s", max, longest);
+	printf("\n");
 	return 0;
 }
 
