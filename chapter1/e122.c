@@ -33,6 +33,7 @@ int main (void)
 			}
 		}
 		putchar(c);
+		char_count += 1;
 	}
 		
 }
